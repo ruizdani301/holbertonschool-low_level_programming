@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <time.h>
-#include <time.h>
 
 /**
 *main - asigne a random number and indiicate if is positive,zero,negative
