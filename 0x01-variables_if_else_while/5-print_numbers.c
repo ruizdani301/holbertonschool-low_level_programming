@@ -9,13 +9,12 @@
 
 int main(void)
 {
-	
-	for (a = 0; a<=9; a++)
+
+	for (a = 0; a <= 9; a++)
 	{
 		printf(a);
 
 	}
-	putchar("\n")
-	return (0)
+	putchar(10);
+	return (0);
 }
-	
