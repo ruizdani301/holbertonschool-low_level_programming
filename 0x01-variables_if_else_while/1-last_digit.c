@@ -22,7 +22,7 @@ int main(void)
 	}
 	else if (lastDigit == 0)
 	{
-		printf("%d and is 0"lastDigit);
+		printf("%d and is 0" lastDigit);
 	}
 	else
 	{
