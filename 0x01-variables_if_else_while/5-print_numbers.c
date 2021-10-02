@@ -3,17 +3,17 @@
 #include <stdio.h>
 
 /**
-*main - program that prints number 0 - 9,
+* main - prints the alphabet in lowercase
+*
 *Return: 0
 */
-
 int main(void)
 {
-	int a
-	for (a = 0; a <= 9; a++)
-	{
-		printf(a);
+	int i = 0;
 
+	for (i = 0; i < 10; i++)
+	{
+		printf("%i", i);
 	}
 	putchar(10);
 	return (0);
