@@ -18,6 +18,7 @@ int c;
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(' ');
 			}
 			if (c > 9)
 			{
