@@ -12,13 +12,11 @@ int c;
 		for (i = 0; i <= 9; i++)
 		{
 			c = (a * i);
-			while (i != 9)
+			if (c <= 9)
 			{
-				if (c <= 9)
-			{
-				_putchar((c % 10) + '0');
-				_putchar(',');
 				_putchar(' ');
+				_putchar((c % 10) + '0');
+								
 			}
 				if (c > 9)
 				{
@@ -28,16 +26,6 @@ int c;
 				_putchar(' ');
 				}
 			}
-			if (c <= 9)
-			{
-			_putchar((c % 10) + '0');
-			}
-			else if (c > 9)
-			{
-				_putchar((c / 10) + '0');
-				_putchar((c % 10) + '0');
-			}
-		}
 		_putchar('\n');
 	}
 }
