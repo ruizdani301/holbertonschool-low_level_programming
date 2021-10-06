@@ -14,16 +14,20 @@ int c;
 			c = (a * i);
 			if (c <= 9)
 			{
-				_putchar(' ');
 				_putchar((c % 10) + '0');
+				_putchar(' ');
 			}
 				if (c > 9)
 				{
-				_putchar(' ');
 				_putchar((c / 10) + '0');
 				_putchar((c % 10) + '0');
 				_putchar(',');
+				_putchar(' ');
 				}
+			if(i < 9)
+			{
+				 _putchar(',')
+			}
 			}
 		_putchar('\n');
 	}
