@@ -19,10 +19,10 @@ int c;
 			}
 				if (c > 9)
 				{
+				_putchar(' ');
 				_putchar((c / 10) + '0');
 				_putchar((c % 10) + '0');
 				_putchar(',');
-				_putchar(' ');
 				}
 			}
 		_putchar('\n');
