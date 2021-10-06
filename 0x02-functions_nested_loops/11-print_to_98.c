@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *print_to_98 - function that return (i + z)
  *@n: data one
@@ -9,9 +10,9 @@ void print_to_98(int n)
 {
 	if (n < 98)
 	{
-		for (n = 'n'; n < 98; n++)
+		for (n = 'n'; n <= 98; n++)
 		{
-			_putchar('n');
+			printf("%d", n);
 			_putchar(',');
 			_putchar(' ');
 		}
@@ -19,9 +20,9 @@ void print_to_98(int n)
 	_putchar(10);
 	if (n > 98)
 	{
-		for (n = n; n > 98; n--)
+		for (n = n; n >= 98; n--)
 		{
-		_putchar('n');
+		printf("%d", n);
 		_putchar(',');
 		_putchar(' ');
 	}
