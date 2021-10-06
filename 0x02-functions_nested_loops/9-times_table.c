@@ -25,7 +25,7 @@ int c;
 			_putchar(',');
 			_putchar(' ');
 			}
-		_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
