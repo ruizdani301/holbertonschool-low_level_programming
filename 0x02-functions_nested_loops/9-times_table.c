@@ -15,7 +15,6 @@ int c;
 			if (c <= 9)
 			{
 				_putchar((c % 10) + '0');
-				_putchar(' ');
 			}
 			if (c > 9)
 				{
@@ -25,6 +24,7 @@ int c;
 			if (i < 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 			}
 			}
 		_putchar('\n');
