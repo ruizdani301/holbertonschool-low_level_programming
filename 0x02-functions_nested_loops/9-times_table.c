@@ -12,24 +12,24 @@ int c;
 		for (i = 0; i <= 9; i++)
 		{
 			c = (a * i);
+			if (i <= 9 && i > 0)
+			{
+				_putchar(',');
+				_putchar(32);
+			}
+			if (c <= 9 && c >= 0 && i > 0)
+			{
+				_putchar(32);
+			}
 			if (c <= 9)
 			{
-				_putchar((c % 10) + '0');
+				_putchar(c + '0');
 			}
 			if (c > 9)
 				{
 				_putchar((c / 10) + '0');
 				_putchar((c % 10) + '0');
 				}
-			if (i < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-			if (a < 9)
-			{
-				_putchar(' ');
-			}
 			}
 		_putchar('\n');
 	}
