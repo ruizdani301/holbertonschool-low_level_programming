@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-*print_numbers - 0 - 9 numbers,
+*print_numbers - 0 a 9 numbers,
 */
 void print_numbers(void)
 {
-	int i;
+	int i = 0;
 
 	for (i = 48; i <= 57; i++)
 	{
