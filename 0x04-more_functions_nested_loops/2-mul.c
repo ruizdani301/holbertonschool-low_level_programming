@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-*_isdigit - prints mul,
+*mul - prints mul,
 *@a: variable
 *@b: variable
-*Return: 0
+*Return: data
 */
 int mul(int a, int b)
 {
