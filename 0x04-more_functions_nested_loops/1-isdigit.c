@@ -3,21 +3,17 @@
 /**
 *_isdigit - prints the alphabet, upercase,
 *@c: variable
-*Return: 0
+*Return: 0 or 1
 */
 int _isdigit(int c)
 {
-	int i = 0;
-
-	for (i = 0; i <= 9; i++)
+	if (c >= 48 && c <= 57)
 	{
-		if (i == c)
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }
+
