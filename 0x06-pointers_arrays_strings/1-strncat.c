@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * _strcat - print array
 * @dest:variable
@@ -23,7 +22,9 @@ char *_strncat(char *dest, char *src, int n)
 		c++;
 	}
 	if (n > c)
-	    n = c;
+	{
+		n = c;
+	}
 	while ((n > 0) && (*src != '\0'))
 	{
 		*p++ = *src++;
@@ -31,6 +32,4 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	*p = '\0';
 	return (dest);
-
-
 }
