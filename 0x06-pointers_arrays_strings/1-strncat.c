@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _strcat - print array
+* _strncat - print array
 * @dest:variable
 * @src:variable
 * @n: variable
