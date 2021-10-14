@@ -2,22 +2,23 @@
 
 /**
 * _strcat - print array
-* @dest:variable
-* @src:variable
+* @dest:s1
+* @src:s2
 * Return: 0
 */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int x;
+	char *ptr = dest;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	while (*ptr != '\0')
 	{
+		ptr++;
 	}
-	for (x = 0; src[x] != '\0'; x++)
+	while (*src != '\0')
 	{
-		dest[i++] = src[x];
+		*ptr++ = *src++;
 	}
-	dest[i++] = src[x];
+	(*ptr = '\0');
+
 	return (dest);
 }
