@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 		c++;
 	}
 	if (n > c)
-	n = c
+	    n = c;
 	while ((n > 0) && (*src != '\0'))
 	{
 		*p++ = *src++;
