@@ -24,7 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	if (n > c)
 	n = c
-	while ((n > 0) && (*src != '\0')
+	while ((n > 0) && (*src != '\0'))
 	{
 		*p++ = *src++;
 		n--;
