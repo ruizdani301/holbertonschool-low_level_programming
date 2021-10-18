@@ -4,7 +4,7 @@
 * _memcpy - toupper.
 * @dest: variable
 * @src: variable
-* @s: variable
+* @n: variable
 * Return: (data)
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
