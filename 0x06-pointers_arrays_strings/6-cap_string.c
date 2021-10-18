@@ -1,27 +1,32 @@
 #include "main.h"
-/**
-* cap_string - toupper.
-* @n: variable
-* Return: (data)
-*/
-char *cap_string(char *n)
-{
-	char b[] = "' '\t\n,;.!?\"(){}";
-	int i = 0;
-	int x = 0;
+#include <stdio.h>
 
-	for (i = 0; n[i] != '\0'; i++)
+/**
+ * cap_string - ...
+ * @s: ...
+ *
+ * Return: char value
+ */
+char *cap_string(char *s)
+{
+	int a = 0, i;
+	int cspc = 13;
+	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+
+	while (s[a])
 	{
-		for (x = 0; b[x] != '\0'; x++)
+		i = 0;
+
+		while (i < cspc)
 		{
-			if (n[i] == b[x])
-			{
-				if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
-				{
-					n[i + 1] = n[i + 1] - 32;
-				}
-			}
+			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+				s[a] -= 32;
+
+			i++;
 		}
+
+		a++;
 	}
-	return (n);
+
+	return (s);
 }
