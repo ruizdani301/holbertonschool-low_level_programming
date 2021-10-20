@@ -29,13 +29,4 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	ult = s[i + 1];
-	if (ult == '\0')
-	{
-		return ('\0');
-	}
-	else
-	{
-		return (s);
-	}
 }
