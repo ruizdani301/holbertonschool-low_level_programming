@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _sqrt_recursion - factorial
- * @i:variable
+ * _sqrt - recursion
  * @n:variable
+ * @i:variable
  * Return: Always Data.
  */
 int _sqrt(int i, int n)
@@ -21,6 +21,11 @@ int _sqrt(int i, int n)
 		return (_sqrt((i + 1), n));
 	}
 }
+/**
+ * _sqrt_recursion -recursion
+ * @n:variable
+ * Return: Always Data.
+ */
 int _sqrt_recursion(int n)
 {
 	int i = 0;
