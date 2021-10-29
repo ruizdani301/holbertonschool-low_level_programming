@@ -11,9 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int i = 0;
-	unsigned int j = 0;
-	int count = 0;
+	unsigned int i = 0, j = 0, count2 = 0, count = 0, total = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -25,13 +23,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		count++;
 	}
 	i = 0;
-	while (n >= i)
+	while (s2[i] != '\0')
 	{
 		i++;
-		count++;
+		count2++;
 	}
-	count++;
-	p = malloc(sizeof(char) * count);
+	if (n >= count2)
+		total =	count + count2;
+	else
+		total =	count + n;
+	p = malloc(sizeof(char) * total + 1);
 	if (p == NULL)
 	{
 		return (NULL);
@@ -42,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 		i++;
 	}
-	while (n >= j)
+	while (total >= i)
 	{
 		p[i] = s2[j];
 		i++;
