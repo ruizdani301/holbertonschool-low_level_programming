@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		total =	count + count2;
 	else
 		total =	count + n;
-	p = malloc(sizeof(char) * total);
+	p = malloc(sizeof(char) * (total + 1));
 	if (p == NULL)
 	{
 		return (NULL);
@@ -39,11 +39,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 		i++;
 	}
-	while (total >= (i + 1))
+	while (total >= i)
 	{
 		p[i] = s2[j];
 		i++;
 		j++;
 	}
+	p[total] = '\0';
 	return (p);
 }
