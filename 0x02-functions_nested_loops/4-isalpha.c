@@ -1,14 +1,13 @@
 #include "main.h"
-
 /**
-*_isalpha -  compare, in lowercase,
-*@c: variable
-*Return: 0
+* _isalpha -  compare, in lowercase,
+* @c: variable
+* Return: 0
 */
 
 int _isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
