@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint
+ * print_listint -  prints all the elements
  * @h: pointer
  * Return: Data
  */
