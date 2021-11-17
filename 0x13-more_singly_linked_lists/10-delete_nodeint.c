@@ -26,11 +26,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	while (x < index && tmp != NULL)
 	{
+		tmp = tmp->next;
 		if (tmp == NULL)
 		{
 			return (-1);
 		}
-		tmp = tmp->next;
 		x++;
 	}
 	pin = tmp;
