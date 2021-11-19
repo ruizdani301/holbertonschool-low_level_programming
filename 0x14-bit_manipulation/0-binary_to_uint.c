@@ -21,7 +21,11 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[x] < '0' || b[x] > '1')
 			return (0);
-		if (b == NULL)
+		else if (b[x] > 'a' && b[x] < 'z')
+			return (0);
+		else if (b[x] > 'A' && b[x] < 'Z')
+			return (0);
+		else if (!b)
 			return (0);
 		if (b[x] == '1')
 			dec += mult;
