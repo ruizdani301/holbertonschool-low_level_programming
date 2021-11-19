@@ -12,6 +12,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int dec = 0;
 	int x;
 
+	if (b == NULL)
+		return (0);
 	while (b[n] != '\0')
 	{
 		n++;
@@ -24,8 +26,6 @@ unsigned int binary_to_uint(const char *b)
 		else if (b[x] > 'a' && b[x] < 'z')
 			return (0);
 		else if (b[x] > 'A' && b[x] < 'Z')
-			return (0);
-		else if (b == NULL)
 			return (0);
 		if (b[x] == '1')
 			dec += mult;
