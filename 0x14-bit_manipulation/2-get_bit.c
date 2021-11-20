@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * get_bit -  returns the value of a bit at a given index.
+ * @n: int
+ * @index : variable
+ * Return: Data
+ */
 
 int get_bit(unsigned long int n, unsigned int index)
 {
