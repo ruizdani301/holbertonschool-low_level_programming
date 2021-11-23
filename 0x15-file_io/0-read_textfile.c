@@ -10,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int des;
 	int r;
-        int w;
+	int w;
 	char *memo;
 
 	if (filename == NULL)
@@ -19,14 +19,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	memo = malloc(sizeof(char) * letters);
 	if (memo == NULL)
 		return (0);
-	r = read (des, memo, letters);
+	r = read(des, memo, letters);
 	if (r < 0)
 	{
 		free(memo);
 		return (0);
 	}
 	close(des);
-	w = write (STDOUT_FILENO,memo,r);
+	w = write(STDOUT_FILENO, memo, r);
 	if (w < 0)
 	{
 		free(memo);
