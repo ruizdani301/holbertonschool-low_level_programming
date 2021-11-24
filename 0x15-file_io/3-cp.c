@@ -1,15 +1,40 @@
 #include "main.h"
 
 /**
+ * cases - cases
+ * @argv: array
+ */
+void cases(char *argv)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read to %s\n", argv);
+	exit(98);
+}
+/**
+ * case_desc - case_desc
+ * @argv: array
+ */
+void case_desc(char *argv)
+{
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
+	exit(99);
+}
+/**
+ * case_clos - case e
+ * @e: data
+ */
+void case_clos(int e)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", e);
+	exit(100);
+}
+/**
  * main -  main
  * @argc: Counter
- * @argv: Data
+ * @argv: array
  * Return: int
  */
-
 int main(int argc, char *argv[])
 {
-
 	int d, e;
 	char memo[1024];
 	int r;
@@ -22,53 +47,31 @@ int main(int argc, char *argv[])
 	}
 	desr = open(argv[1], O_RDONLY);
 	if (desr < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read to %s\n", argv[1]);
-		close(desr);
-		exit(98);
-	}
+		cases(argv[1]);
 	desc = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (desc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		close(desc);
-		exit(99);
-	}
+		case_desc(argv[2]);
 	r = read(desr, memo, 1024);
 	if (r < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read to %s\n", argv[1]);
-		close(desr);
-		exit(98);
-	}
+		cases(argv[1]);
 	while (r > 0)
 	{
 		w = write(desc, memo, r);
 		if (w != r)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(desc);
-			exit(99);
+			case_desc(argv[2]);
 		}
 		r = read(desr, memo, 1024);
 		if (r < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read to %s\n", argv[1]);
-			close(desr);
-			exit(98);
+			cases(argv[1]);
 		}
 	}
 	e = close(desr);
 	if (e < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", e);
-		exit(100);
-	}
+		case_clos(e);
 	d = close(desc);
 	if (d < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", d);
-		exit(100);
-	}
+		case_clos(d);
 	return (0);
 }
