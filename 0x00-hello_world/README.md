@@ -1,5 +1,5 @@
 
-<h2>*First steps in language C</h2> 
+<h2>🏢First steps in language C</h2> 
 
 <p>During the development of this project it is sought to consolidate the following aspects</p>
 
