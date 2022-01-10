@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* _strcmp - compares two strings.
-* @s1:variable
-* @s2:variable
+* _strcmp- toupper.
+* @s1: variable
+* @s2: variable
 * Return: (data)
 */
 int _strcmp(char *s1, char *s2)

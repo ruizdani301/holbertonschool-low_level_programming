@@ -1,14 +1,25 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
-* _strstr - toupper.
-* @haystack: variable
-* @needle: variable
-* Return: (data)
-*/
+ * *_strstr - find a substring inside a string
+ * @haystack: string to be check
+ * @needle: substring to looking for
+ * Return: pointer to point at beggining substring or NULL
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	(void)haystack;
-	(void)needle;
-	return (0);
+	int i, j;
+
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			if (haystack[i + j] != needle[j])
+				break;
+		}
+		if (!needle[j])
+			return (&haystack[i]);
+	}
+	return (NULL);
 }

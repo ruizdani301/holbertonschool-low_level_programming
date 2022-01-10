@@ -1,12 +1,18 @@
 #include "main.h"
 
 /**
-*_puts - print stream
-*@str:variable
-*Return: 0
-*/
+ * _puts - prints the text pass by reference
+ * @str: pointer to char
+ */
+
 void _puts(char *str)
 {
-	printf("%s", str);
-	printf("\n");
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
+
 }
