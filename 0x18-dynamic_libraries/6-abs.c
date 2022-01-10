@@ -1,14 +1,14 @@
 #include "main.h"
 /**
 *_abs - prints sign,
-*@x: variable
+*@n: variable
 *Return: 0
 */
-int _abs(int x)
+int _abs(int n)
 {
-	if (x < 0)
+	if (n < 0)
 	{
-		return (x * -1);
+		return (n * -1);
 	}
-		return (x);
+		return (n);
 }
