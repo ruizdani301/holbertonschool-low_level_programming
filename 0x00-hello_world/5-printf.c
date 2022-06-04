@@ -1,7 +1,7 @@
 # include <stdio.h>
 /**
 * main - el segundo ejercicio
-* Return: 0
+* Return: 0,
 */
 int main(void)
 {
